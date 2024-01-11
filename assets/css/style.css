@@ -746,6 +746,10 @@ section {
   padding-top: 40px;
 }
 
+.about .container .row .col-lg-4 img {
+  border-radius: 50%;
+}
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
