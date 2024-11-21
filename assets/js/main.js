@@ -175,10 +175,21 @@
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+        itemSelector: '.portfolio-item',
+        // Define o filtro inicial para 'filter-research'
+        filter: '.filter-research'
       });
 
       let portfolioFilters = select('#portfolio-flters li', true);
+
+      // Ativa o botão de filtro 'Research' ao carregar a página
+      portfolioFilters.forEach(function(el) {
+        el.classList.remove('filter-active');
+      });
+      let activeFilter = select('#portfolio-flters li[data-filter=".filter-research"]');
+      if (activeFilter) {
+        activeFilter.classList.add('filter-active');
+      }
 
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
