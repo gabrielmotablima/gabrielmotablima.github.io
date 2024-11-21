@@ -1176,9 +1176,9 @@ section {
 # From Papers CSS
 --------------------------------------------------------------*/
 .link-block a {
-  margin-top: 5px;
+  /* margin-top: 5px;
   margin-bottom: 5px;
-  padding-right: 20px;
+  padding-right: 20px; */
   font-size: small;
 }
 
